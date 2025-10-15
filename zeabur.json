@@ -1,0 +1,25 @@
+{
+  "name": "tg-message-extractor",
+  "description": "Telegram Message Extractor Bot",
+  "version": "1.0.0",
+  "main": "main.py",
+  "scripts": {
+    "start": "python3 main.py"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "message-extractor",
+    "pyrogram"
+  ],
+  "author": "Your Name",
+  "license": "GPL-3.0",
+  "engines": {
+    "python": "3.10"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

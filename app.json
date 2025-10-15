@@ -1,0 +1,100 @@
+{
+  "name": "Save Restricted Content Bot v3",
+  "description": "受限内容保存机器人（本地/自建部署用）",
+  "logo": "https://lh3.googleusercontent.com/-HPcn7AqepNg/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfknb1BkQiq-8_KUVOYcNAJ4swKivDQ/photo.jpg",
+  "keywords": ["python3", "telegram", "MusicBot", "telegram-bot", "pyrogram"],
+  "repository": "https://github.com/devgaganin/save_restricted-content-telegram-bot-repo",
+  "success_url": "https://devgagan.in",
+  "env": {
+    "API_ID": {
+      "description": "从 https://my.telegram.org 获取 API_ID",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "从 https://my.telegram.org 获取 API_HASH",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "在 @BotFather 创建机器人后获得的 Bot Token",
+      "value": "",
+      "required": true
+    },
+    "MONGO_DB": {
+      "description": "MongoDB 连接字符串（例如来自 https://cloud.mongodb.com）",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "机器人主人用户 ID（可填多个，用空格分隔，例如：1234 5678）",
+      "value": "",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MongoDB 数据库名（默认：telegram_downloader）",
+      "value": "telegram_downloader",
+      "required": false
+    },
+    "STRING": {
+      "description": "可选：Pyrogram 会话字符串（用于 4GB 上传等扩展能力）",
+      "value": "",
+      "required": false
+    },
+    "FORCE_SUB": {
+      "description": "可选：强制订阅频道的 ID（必须带 -100 前缀，如 -1001234567890）",
+      "value": "",
+      "required": false
+    },
+    "LOG_GROUP": {
+      "description": "日志群/频道 ID（必须带 -100 前缀，机器人会在此输出运行日志）",
+      "value": "",
+      "required": true
+    },
+    "MASTER_KEY": {
+      "description": "主密钥：用于会话加密（建议自行更换为随机强密码）",
+      "value": "gK8HzLfT9QpViJcYeB5wRa3DmN7P2xUq",
+      "required": false
+    },
+    "IV_KEY": {
+      "description": "解密向量（IV），与主密钥一起用于加解密（建议更换）",
+      "value": "s7Yx5CpVmE3F",
+      "required": false
+    },
+    "YT_COOKIES": {
+      "description": "可选：YouTube Cookies（Netscape 格式，用于提升下载稳定性）",
+      "value": "",
+      "required": false
+    },
+    "INSTA_COOKIES": {
+      "description": "可选：Instagram Cookies（Netscape 格式）",
+      "value": "",
+      "required": false
+    },
+    "FREEMIUM_LIMIT": {
+      "description": "免费用户每日限额（单位自定义，服务端自行解析）",
+      "value": "0",
+      "required": false
+    },
+    "PREMIUM_LIMIT": {
+      "description": "高级用户每日限额（单位自定义，服务端自行解析）",
+      "value": "500",
+      "required": false
+    },
+    "ADMIN_CONTACT": {
+      "description": "管理员联系链接（用于错误提示里引导联系）",
+      "value": "https://t.me/kingofpatal",
+      "required": true
+    },
+    "JOIN_LINK": {
+      "description": "/start 展示的频道加入链接（可选，若启用可放引导文案）",
+      "value": "https://t.me/team_spy_pro",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" }
+  ],
+  "stack": "container"
+}
